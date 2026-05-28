@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Solstice | Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;600;800&display=swap');
+        .body-font { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 body-font antialiased selection:bg-red-600 selection:text-white scroll-smooth">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-900">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="w-32 transition-transform hover:scale-105 duration-300">
+                <img src="Logo Solstice.jpg" alt="The Solstice Logo" class="max-h-12 object-contain" onerror="this.style.display='none'; document.getElementById('nav-fallback').style.display='block';">
+                <span id="nav-fallback" class="hidden font-bold tracking-widest text-sm">THE SOLSTICE</span>
+            </a>
+            <nav class="hidden md:flex space-x-10 uppercase tracking-widest text-xs font-semibold text-neutral-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#members" class="hover:text-white transition-colors">The Soul of Solstice</a>
+                <a href="#live" class="hover:text-white transition-colors">The Solstice Live</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 overflow-hidden bg-black">
+        <div class="max-w-5xl mx-auto text-center z-10 w-full flex flex-col items-center justify-center">
+            <div class="w-full max-w-4xl flex justify-center items-center">
+                <img src="Logo Solstice.jpg" alt="The Solstice" class="w-full h-auto object-contain select-none">
+            </div>
+            <p class="text-neutral-400 text-sm md:text-md max-w-2xl mx-auto mt-6 mb-10 tracking-[0.25em] font-light uppercase">
+                Progressive Rock Ballads • Kolkata
+            </p>
+            <a href="#live" class="inline-block px-10 py-4 bg-red-600 hover:bg-red-700 text-white font-bold tracking-widest uppercase text-sm transition-all shadow-lg shadow-red-900/40 transform hover:scale-105 duration-300">
+                Explore The Noise
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 border-t border-neutral-900 bg-neutral-900/30">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8 text-white uppercase">
+                About the Band
+            </h2>
+            <div class="w-16 h-1 bg-red-600 mx-auto mb-8"></div>
+            <p class="text-neutral-300 text-lg md:text-xl leading-relaxed font-light mb-6">
+                Born out of the underground music circuits of Kolkata, <strong class="text-white font-semibold">The Solstice</strong> is a progressive rock outfit carving out a visceral, defiant space in the independent scene. Melding structural complexity with raw, emotional vulnerability, our sound shifts between intricately layered guitar arrangements, sweeping neoclassical violin textures, and crushing rhythms that push past standard rock boundaries.
+            </p>
+            <p class="text-neutral-400 text-base md:text-lg leading-relaxed font-light">
+                At our core, we write progressive rock ballads driven by themes of resilience, survival, and structural depth. From quiet, atmospheric builds to unyielding walls of sonic gravity, our music is a testament to those standing firm against the current—raw, uncompromised, and defiant.
+            </p>
+        </div>
+    </section>
+
+    <section id="members" class="py-24 px-6 border-t border-neutral-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-center mb-4 uppercase text-white">
+                The Soul of Solstice
+            </h2>
+            <p class="text-neutral-500 text-center mb-12 uppercase tracking-widest text-xs">Click a member card to view their profile details</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                
+                <div onclick="openBioModal('tuneer')" class="bg-neutral-900 border border-neutral-800/60 overflow-hidden group rounded shadow-md flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="aspect-[3/4] bg-neutral-950 relative overflow-hidden shrink-0">
+                        <img src="_DSC0124.jpg" alt="Tuneer Biswas" class="w-full h-full object-cover grayscale group-hover:opacity-0 transition-opacity duration-500 absolute inset-0">
+                        <img src="_DSC0195.jpg" alt="Tuneer Biswas Live" class="w-full h-full object-cover grayscale opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 scale-100 group-hover:scale-105 duration-700">
+                    </div>
+                    <div class="p-4 bg-neutral-900 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-sm font-bold text-white mb-0.5 truncate">Tuneer Biswas</h3>
+                            <p class="text-red-500 font-semibold tracking-wider text-[10px] uppercase">Vocals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openBioModal('rohit')" class="bg-neutral-900 border border-neutral-800/60 overflow-hidden group rounded shadow-md flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="aspect-[3/4] bg-neutral-950 relative overflow-hidden shrink-0">
+                        <img src="IMG-20260330-WA0031.jpg" alt="Rohit Gomes" class="w-full h-full object-cover grayscale group-hover:opacity-0 transition-opacity duration-500 absolute inset-0">
+                        <img src="IMG-20260506-WA0034.jpg" alt="Rohit Gomes Live" class="w-full h-full object-cover grayscale opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 scale-100 group-hover:scale-105 duration-700">
+                    </div>
+                    <div class="p-4 bg-neutral-900 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-sm font-bold text-white mb-0.5 truncate">Rohit Gomes</h3>
+                            <p class="text-red-500 font-semibold tracking-wider text-[10px] uppercase">Drums</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openBioModal('subhrojyoti')" class="bg-neutral-900 border border-neutral-800/60 overflow-hidden group rounded shadow-md flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="aspect-[3/4] bg-neutral-950 relative overflow-hidden shrink-0">
+                        <img src="_DSC0126.jpg" alt="Subhrojyoti De" class="w-full h-full object-cover grayscale group-hover:opacity-0 transition-opacity duration-500 absolute inset-0">
+                        <img src="_DSC0244.jpg" alt="Subhrojyoti De Live" class="w-full h-full object-cover grayscale opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 scale-100 group-hover:scale-105 duration-700">
+                    </div>
+                    <div class="p-4 bg-neutral-900 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-sm font-bold text-white mb-0.5 truncate">Subhrojyoti De</h3>
+                            <p class="text-red-500 font-semibold tracking-wider text-[10px] uppercase">Guitars</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openBioModal('arpon')" class="bg-neutral-900 border border-neutral-800/60 overflow-hidden group rounded shadow-md flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="aspect-[3/4] bg-neutral-950 relative overflow-hidden shrink-0">
+                        <img src="IMG-20241231-WA0134.jpg" alt="Arpon Chakraborty" class="w-full h-full object-cover grayscale group-hover:opacity-0 transition-opacity duration-500 absolute inset-0">
+                        <img src="Arpon2.jpg" alt="Arpon Chakraborty Live" class="w-full h-full object-cover grayscale opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 scale-100 group-hover:scale-105 duration-700">
+                    </div>
+                    <div class="p-4 bg-neutral-900 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-sm font-bold text-white mb-0.5 truncate">Arpon Chakraborty</h3>
+                            <p class="text-red-500 font-semibold tracking-wider text-[10px] uppercase">Guitars</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openBioModal('yuvan')" class="bg-neutral-900 border border-neutral-800/60 overflow-hidden group rounded shadow-md flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="aspect-[3/4] bg-neutral-950 relative overflow-hidden shrink-0">
+                        <img src="Yuvan1.jpg" alt="Yuvan Bhattacharya" class="w-full h-full object-cover grayscale group-hover:opacity-0 transition-opacity duration-500 absolute inset-0">
+                        <img src="Yuvan2.jpg" alt="Yuvan Bhattacharya Live" class="w-full h-full object-cover grayscale opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute inset-0 scale-100 group-hover:scale-105 duration-700">
+                    </div>
+                    <div class="p-4 bg-neutral-900 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-sm font-bold text-white mb-0.5 truncate">Yuvan Bhattacharya</h3>
+                            <p class="text-red-500 font-semibold tracking-wider text-[10px] uppercase">Violin</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="bioModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeBioModal()">
+        <div class="bg-neutral-900 border border-neutral-800 w-full max-w-2xl relative rounded overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+            <button onclick="closeBioModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-2xl transition-colors z-50 bg-neutral-950/50 w-8 h-8 flex items-center justify-center rounded-full">&times;</button>
+            <div id="modalContent" class="grid grid-cols-1 md:grid-cols-2">
+                </div>
+        </div>
+    </div>
+
+    <section id="live" class="py-24 px-6 border-t border-neutral-900 bg-neutral-900/20">
+        <div class="max-w-6xl mx-auto space-y-20">
+            
+            <div>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-center mb-4 uppercase text-white">
+                    The Solstice Live
+                </h2>
+                <div class="w-16 h-1 bg-red-600 mx-auto mb-12"></div>
+
+                <div class="bg-neutral-900 border border-neutral-800 p-4 rounded shadow-2xl space-y-4 max-w-5xl mx-auto">
+                    <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+                        <span class="text-xs uppercase tracking-widest font-bold text-red-500">Live Gig Chronicle</span>
+                        <span id="carouselTracker" class="text-[10px] font-mono tracking-widest text-neutral-500 uppercase">Image 1 of 10</span>
+                    </div>
+
+                    <div class="relative aspect-video bg-neutral-950 overflow-hidden rounded border border-neutral-950 flex items-center justify-center">
+                        <img id="carouselBlurBg" src="Stage 1.jpg" class="absolute inset-0 w-full h-full object-cover blur-xl opacity-30 scale-110 select-none pointer-events-none transition-all duration-500">
+                        <img id="mainCarouselView" src="Stage 1.jpg" alt="The Solstice Live Set" class="relative z-10 max-w-full max-h-full h-full w-full object-contain transition-all duration-500 select-none" onerror="handleMainImageError(this)">
+                        
+                        <button onclick="navigateCarousel(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-neutral-950/70 hover:bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800/50 backdrop-blur-sm transition-colors text-lg font-bold select-none z-20">&larr;</button>
+                        <button onclick="navigateCarousel(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-neutral-950/70 hover:bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800/50 backdrop-blur-sm transition-colors text-lg font-bold select-none z-20">&rarr;</button>
+                    </div>
+
+                    <div class="grid grid-cols-5 gap-2 pt-2" id="thumbnailStripRow">
+                        <div onclick="jumpToCarouselIndex(0)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-red-600 transition-all duration-300">
+                            <img src="Stage 1.jpg" class="w-full h-full object-cover" onerror="this.src='Stage1.jpg';">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(1)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 2.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 2.png'; this.onerror=function(){this.src='Stage2.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(2)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 3.jpg" class="w-full h-full object-cover" onerror="this.src='Stage3.jpg';">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(3)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 4.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 4.png'; this.onerror=function(){this.src='Stage4.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(4)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 5.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 5.png'; this.onerror=function(){this.src='Stage5.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(5)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage6.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 6.jpg';">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(6)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 7.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 7.png'; this.onerror=function(){this.src='Stage7.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(7)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 8.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 8.png'; this.onerror=function(){this.src='Stage8.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(8)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 9.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 9.png'; this.onerror=function(){this.src='Stage9.jpg'}">
+                        </div>
+                        <div onclick="jumpToCarouselIndex(9)" class="aspect-video bg-neutral-950 cursor-pointer overflow-hidden rounded border-2 border-transparent hover:border-neutral-700 transition-all duration-300">
+                            <img src="Stage 10.jpg" class="w-full h-full object-cover" onerror="this.src='Stage 10.png'; this.onerror=function(){this.src='Stage10.jpg'}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="border-l-4 border-red-600 pl-4 mb-8">
+                    <h3 class="text-2xl font-extrabold tracking-wider text-white uppercase">Live Set Theater</h3>
+                    <p class="text-xs text-neutral-400 uppercase tracking-widest mt-1">Stream full performance sets straight from our vault</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-neutral-900 border border-neutral-800 p-4 rounded shadow-2xl">
+                    <div class="lg:col-span-2 aspect-video bg-black rounded overflow-hidden border border-neutral-950 flex items-center justify-center relative">
+                        <video id="theaterPlayer" class="w-full h-full object-contain" controls>
+                            <source id="theaterSource" src="LiveVideo1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="flex flex-col justify-start space-y-2 h-full overflow-y-auto pr-1">
+                        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-500 mb-2 block border-b border-neutral-800 pb-2">Select Live Set</span>
+                        
+                        <button onclick="swapTheaterTrack('LiveVideo1.mp4', 'video/mp4', 0)" class="track-selection-btn w-full text-left p-3.5 bg-neutral-950 border-l-2 border-red-600 rounded flex flex-col transition-all duration-200">
+                            <span class="text-white text-xs font-bold tracking-wide">01. Live Performance — Track I</span>
+                            <span class="text-[10px] text-red-500 mt-1 uppercase tracking-wider font-semibold font-mono">MP4 FORMAT FILE</span>
+                        </button>
+
+                        <button onclick="swapTheaterTrack('LiveVideo2.mp4', 'video/mp4', 1)" class="track-selection-btn w-full text-left p-3.5 bg-neutral-950/40 border-l-2 border-transparent hover:bg-neutral-950 rounded flex flex-col transition-all duration-200">
+                            <span class="text-neutral-300 hover:text-white text-xs font-bold tracking-wide">02. Live Performance — Track II</span>
+                            <span class="text-[10px] text-neutral-500 mt-1 uppercase tracking-wider font-mono">MP4 FORMAT FILE</span>
+                        </button>
+
+                        <button onclick="swapTheaterTrack('LiveVideo3.mp4', 'video/mp4', 2)" class="track-selection-btn w-full text-left p-3.5 bg-neutral-950/40 border-l-2 border-transparent hover:bg-neutral-950 rounded flex flex-col transition-all duration-200">
+                            <span class="text-neutral-300 hover:text-white text-xs font-bold tracking-wide">03. Live Performance — Track III</span>
+                            <span class="text-[10px] text-neutral-500 mt-1 uppercase tracking-wider font-mono">MP4 FORMAT FILE</span>
+                        </button>
+
+                        <button onclick="swapTheaterTrack('LiveVideo4.mp4', 'video/mp4', 3)" class="track-selection-btn w-full text-left p-3.5 bg-neutral-950/40 border-l-2 border-transparent hover:bg-neutral-950 rounded flex flex-col transition-all duration-200">
+                            <span class="text-neutral-300 hover:text-white text-xs font-bold tracking-wide">04. Live Performance — Track IV</span>
+                            <span class="text-[10px] text-neutral-500 mt-1 uppercase tracking-wider font-mono">MP4 FORMAT FILE</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!-- INSTAGRAM SHOWCASE -->
+<section id="instagram-spotlight" class="py-24 px-6 border-t border-neutral-900 bg-neutral-950">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-extrabold text-white uppercase tracking-wider mb-8 border-l-4 border-red-600 pl-4">Reels Spotlight</h2>
+        <!-- Grid updated to 3 columns to hold 6 items perfectly -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Existing 4 -->
+            <a href="https://www.instagram.com/reel/DYCiv1bvMGX/?igsh=eWR5aGp4MWpvbjB2" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover1.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+            <a href="https://www.instagram.com/reel/DY2AetrvR3r/?igsh=MTdkeW14c3gyZzk0Yw==" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover2.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+            <a href="https://www.instagram.com/reel/DXrVZYFPXGq/?igsh=NDlqdXp5dG92Zzdn" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover3.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+            <a href="https://www.instagram.com/reel/DXKQbBxE4ka/?igsh=MXJoZzJkZHYzNDVwag==" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover4.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+            <!-- New 2 -->
+            <a href="https://www.instagram.com/reel/DX5-pyUTBKz/?igsh=MXVxcmdoYjk2dzk4ZA==" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover5.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+            <a href="https://www.instagram.com/reel/DFGNhk8zr9R/?igsh=eWl2MG02Njl5ODEy" target="_blank" class="group relative aspect-[9/16] overflow-hidden rounded border border-neutral-800"><img src="ReelCover6.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></a>
+        </div>
+    </div>
+</section>
+    <section id="contact" class="py-24 px-6 border-t border-neutral-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-center mb-12 uppercase text-white">
+                Contact Us
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-white tracking-wide uppercase">Booking & Management</h3>
+                    <p class="text-neutral-400 leading-relaxed font-light">
+                        Want to book The Solstice for festival lineups, venue gigs, or media features? Get in touch with us directly via the networks below.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4 text-sm tracking-wide">
+                        <div class="flex items-start text-neutral-300">
+                            <span class="text-red-500 font-bold tracking-widest text-xs uppercase w-24 shrink-0 pt-0.5">EMAIL:</span> 
+                            <a href="mailto:thesolstice.mp3@gmail.com" class="hover:text-red-500 transition-colors border-b border-transparent hover:border-red-500 break-all">thesolstice.mp3@gmail.com</a>
+                        </div>
+                        <div class="flex items-start text-neutral-300">
+                            <span class="text-red-500 font-bold tracking-widest text-xs uppercase w-24 shrink-0 pt-0.5">CALL:</span> 
+                            <span class="flex flex-col gap-2">
+                                <a href="tel:+918017157294" class="hover:text-red-500 transition-colors border-b border-transparent hover:border-red-500">+91 80171 57294</a>
+                                <a href="tel:+917980587638" class="hover:text-red-500 transition-colors border-b border-transparent hover:border-red-500">+91 79805 87638</a>
+                            </span>
+                        </div>
+                        <div class="flex items-start text-neutral-300">
+                            <span class="text-red-500 font-bold tracking-widest text-xs uppercase w-24 shrink-0 pt-0.5">LOCATION:</span> 
+                            <span class="text-neutral-400">Kolkata, WB, India</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-neutral-900">
+                        <a href="https://www.instagram.com/_.thesolstice._?igsh=MWJ4cmo4OG9rNDdsaA==" target="_blank" class="inline-flex items-center gap-3 bg-neutral-900 border border-neutral-700 px-5 py-3 rounded group transition-all shadow-md">
+                            <svg class="w-5 h-5 transition-transform group-hover:scale-110 duration-300" viewBox="0 0 24 24" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f09433" />
+                                        <stop offset="25%" stop-color="#e6683c" />
+                                        <stop offset="50%" stop-color="#dc2743" />
+                                        <stop offset="75%" stop-color="#cc2366" />
+                                        <stop offset="100%" stop-color="#bc1888" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#instagram-gradient)" fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.01 3.8.058 1.028.048 1.747.212 2.365.451a4.902 4.902 0 011.798 1.17 4.92 4.92 0 011.17 1.798c.24.618.404 1.337.453 2.366.047 1.015.057 1.37.057 3.8s-.01 2.784-.057 3.8c-.049 1.029-.213 1.747-.452 2.365a4.902 4.902 0 01-1.17 1.798 4.902 4.902 0 01-1.797 1.17c-.618.239-1.337.404-2.366.453-1.015.047-1.37.058-3.8.058s-2.784-.01-3.8-.058c-1.029-.049-1.747-.213-2.365-.452a4.902 4.902 0 01-1.798-1.17 4.92 4.92 0 01-1.17-1.798c-.24-.618-.404-1.337-.453-2.365C2.01 14.8 2 14.444 2 12s.01-2.784.058-3.8c.048-1.028.212-1.747.451-2.365a4.902 4.902 0 011.17-1.798 4.92 4.92 0 011.798-1.17c.617-.24 1.337-.404 2.366-.453C9.516 2.01 9.87 2 12.315 2zm0 1.854c-2.391 0-2.673.01-3.614.053-.867.039-1.338.184-1.651.302a3.048 3.048 0 00-1.1.715 3.05 3.05 0 00-.715 1.1c-.118.314-.263.784-.302 1.652-.043.941-.053 1.222-.053 3.614s.01 2.673.053 3.614c.039.867.184 1.338.302 1.651a3.05 3.05 0 00.715 1.1 3.048 3.048 0 001.1.715c.314.118.784.263 1.652.302.941.043 1.222.053 3.614.053s2.673-.01 3.614-.053c.867-.039 1.338-.184 1.651-.302a3.05 3.05 0 001.1-.715 3.048 3.048 0 00.715-1.1c.118-.314.263-.784.302-1.652.043-.941.053-1.222.053-3.614s-.01-2.673-.053-3.614c-.039-.867-.184-1.338-.302-1.651a3.048 3.048 0 00-.715-1.1 3.05 3.05 0 00-1.1-.715c-.314-.118-.784-.263-1.652-.302-.941-.043zm0 3.322a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zm0 7.792a2.969 2.969 0 110-5.938 2.969 2.969 0 010 5.938zm4.308-8.051a1.127 1.127 0 112.254 0 1.127 1.127 0 01-2.254 0z" />
+                            </svg>
+                            <span class="text-xs uppercase tracking-widest font-bold text-neutral-300 group-hover:text-white transition-colors">_.thesolstice._</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contactForm" action="https://formspree.io/f/xzdwynjl" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold text-neutral-400 mb-2">Name</label>
+                        <input type="text" name="name" required class="w-full bg-neutral-900 border border-neutral-800 p-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold text-neutral-400 mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full bg-neutral-900 border border-neutral-800 p-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm" placeholder="yourname@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold text-neutral-400 mb-2">Message</label>
+                        <textarea rows="4" name="message" required class="w-full bg-neutral-900 border border-neutral-800 p-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm resize-none" placeholder="Booking query, feedback..."></textarea>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="w-full py-4 bg-white text-neutral-950 font-bold tracking-widest uppercase text-xs hover:bg-neutral-200 transition-colors shadow">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-950 border-t border-neutral-900 py-8 text-center text-xs text-neutral-600 tracking-widest uppercase">
+        <p>&copy; 2026 The Solstice. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const memberData = {
+            tuneer: {
+                name: "Tuneer Biswas",
+                role: "Singer Songwriter and Founder of The Solstice",
+                phone: "+91 80171 57294",
+                image: "_DSC0124.jpg", 
+                liveImage: "_DSC0195.jpg", 
+                instagramText: "_.tuneer_",
+                instagramUrl: "https://www.instagram.com/_.tuneer_?igsh=MTdxbjR6cXVkcHhjNw=="
+            },
+            rohit: {
+                name: "Rohit Gomes",
+                role: "Drums & Percussion specialist for The Solstice",
+                phone: "+91 79805 87638",
+                image: "IMG-20260330-WA0031.jpg",
+                liveImage: "IMG-20260506-WA0034.jpg",
+                instagramText: "_rohit_gomez_",
+                instagramUrl: "https://www.instagram.com/_rohit_gomez_?igsh=MTRlaTc1ZHkzbzUxbA=="
+            },
+            subhrojyoti: {
+                name: "Subhrojyoti De",
+                role: "Progressive rhythm, djent and ambient guitar texturing",
+                phone: "+91 877 765 0922",
+                image: "_DSC0126.jpg",
+                liveImage: "_DSC0244.jpg",
+                instagramText: "djemjr",
+                instagramUrl: "https://www.instagram.com/djemjr?igsh=aWtheDlqdzA2azNs"
+            },
+            arpon: {
+                name: "Arpon Chakraborty",
+                role: "Heavy lead guitar solos and driving melodic arrangements",
+                phone: "+91 6289 930 828",
+                image: "IMG-20241231-WA0134.jpg",
+                liveImage: "Arpon2.jpg",
+                instagramText: "arpon.ch",
+                instagramUrl: "https://www.instagram.com/arpon.ch?igsh=emQxMTl2b3V6dGx6"
+            },
+            yuvan: {
+                name: "Yuvan Bhattacharya",
+                role: "The Violin Player who add finesse to our music",
+                phone: "+91 94330 45938",
+                image: "Yuvan1.jpg",
+                liveImage: "Yuvan2.jpg",
+                instagramText: "yuvaanmusic",
+                instagramUrl: "https://www.instagram.com/yuvaanmusic?igsh=MXh4MG44MjhxMDA4bw=="
+            }
+        };
+
+        function openBioModal(memberId) {
+            const modal = document.getElementById('bioModal');
+            const content = document.getElementById('modalContent');
+            const data = memberData[memberId];
+
+            content.innerHTML = `
+                <div class="hidden md:block aspect-[4/5] bg-neutral-950 relative border-r border-neutral-800">
+                    <img src="${data.liveImage}" alt="${data.name} Live" class="w-full h-full object-cover grayscale" onerror="this.src='${data.image}'">
+                </div>
+                <div class="p-8 flex flex-col justify-center space-y-6">
+                    <div class="space-y-2">
+                        <h4 class="text-2xl font-extrabold tracking-wide text-white uppercase">${data.name}</h4>
+                        <p class="text-neutral-300 text-sm md:text-base leading-relaxed font-light tracking-wide">${data.role}</p>
+                    </div>
+                    <div class="pt-4 border-t border-neutral-800 space-y-4">
+                        <div class="text-xs uppercase tracking-widest text-neutral-400 font-semibold flex items-center gap-2">
+                            <span class="text-red-500 font-bold flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                                PHONE:
+                            </span>
+                            <a href="tel:${data.phone.replace(/\s+/g, '')}" class="hover:text-red-500 transition-colors border-b border-transparent hover:border-red-500 font-medium">${data.phone}</a>
+                        </div>
+                        <div class="pt-2">
+                            <a href="${data.instagramUrl}" target="_blank" class="inline-flex items-center gap-3 bg-neutral-950 border border-neutral-800 hover:border-red-600 px-5 py-3 rounded transition-all group/btn shadow">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="url(#instagram-gradient)" d="M12.315 2c2.43 0 2.784.01 3.8.058 1.028.048 1.747.212 2.365.451a4.902 4.902 0 011.798 1.17 4.92 4.92 0 011.17 1.798c.24.618.404 1.337.453 2.366.047 1.015.057 1.37.057 3.8s-.01 2.784-.057 3.8c-.049 1.029-.213 1.747-.452 2.365a4.902 4.902 0 01-1.17 1.798 4.902 4.902 0 01-1.797 1.17c-.618.239-1.337.404-2.366.453-1.015.047-1.37.058-3.8.058s-2.784-.01-3.8-.058c-1.029-.049-1.747-.213-2.365-.452a4.902 4.902 0 01-1.798-1.17 4.92 4.92 0 01-1.17-1.798c-.24-.618-.404-1.337-.453-2.365C2.01 14.8 2 14.444 2 12s.01-2.784.058-3.8c.048-1.028.212-1.747.451-2.365a4.902 4.902 0 011.17-1.798 4.92 4.92 0 011.798-1.17c.617-.24 1.337-.404 2.366-.453C9.516 2.01 9.87 2 12.315 2zm0 1.854c-2.391 0-2.673.01-3.614.053-.867.039-1.338.184-1.651.302a3.048 3.048 0 00-1.1.715 3.05 3.05 0 00-.715 1.1c-.118.314-.263.784-.302 1.652-.043.941-.053 1.222-.053 3.614s.01 2.673.053 3.614c.039.867.184 1.338.302 1.651a3.05 3.05 0 00.715 1.1 3.048 3.048 0 001.1.715c.314.118.784.263 1.652.302.941.043 1.222.053 3.614.053s2.673-.01 3.614-.053c.867-.039 1.338-.184 1.651-.302a3.05 3.05 0 001.1-.715 3.048 3.048 0 00.715-1.1c.118-.314.263-.784.302-1.652.043-.941.053-1.222.053-3.614s-.01-2.673-.053-3.614c-.039-.867-.184-1.338-.302-1.651a3.048 3.048 0 00-.715-1.1 3.05 3.05 0 00-1.1-.715c-.314-.118-.784-.263-1.652-.302-.941-.043"/>
+                                </svg>
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-neutral-300 group-hover/btn:text-white">${data.instagramText}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.firstElementChild.classList.remove('scale-95');
+        }
+
+        function closeBioModal() {
+            const modal = document.getElementById('bioModal');
+            modal.classList.add('pointer-events-none', 'opacity-0');
+            modal.firstElementChild.classList.add('scale-95');
+        }
+
+        const gigPhotosList = [
+            "Stage 1.jpg", "Stage 2.jpg", "Stage 3.jpg", "Stage 4.jpg", "Stage 5.jpg",
+            "Stage6.jpg", "Stage7.jpg", "Stage 8.jpg", "Stage 9.jpg", "Stage 10.jpg"
+        ];
+
+        let currentGigIndex = 0;
+
+        function handleMainImageError(element) {
+            let currentSrc = element.getAttribute('src');
+            if (currentSrc.includes('.jpg')) {
+                let nextSrc = currentSrc.replace('.jpg', '.png');
+                element.src = nextSrc;
+                document.getElementById('carouselBlurBg').src = nextSrc;
+            }
+        }
+
+        function updateCarouselDisplay() {
+            const mainImg = document.getElementById('mainCarouselView');
+            const blurBg = document.getElementById('carouselBlurBg');
+            const trackerText = document.getElementById('carouselTracker');
+
+            mainImg.src = gigPhotosList[currentGigIndex];
+            blurBg.src = gigPhotosList[currentGigIndex];
+            trackerText.innerText = `Image ${currentGigIndex + 1} of ${gigPhotosList.length}`;
+
+            const containers = document.getElementById('thumbnailStripRow').children;
+            for (let i = 0; i < containers.length; i++) {
+                if (i === currentGigIndex) {
+                    containers[i].classList.remove('border-transparent', 'hover:border-neutral-700');
+                    containers[i].classList.add('border-red-600');
+                } else {
+                    containers[i].classList.remove('border-red-600');
+                    containers[i].classList.add('border-transparent', 'hover:border-neutral-700');
+                }
+            }
+        }
+
+        function navigateCarousel(direction) {
+            currentGigIndex += direction;
+            if (currentGigIndex >= gigPhotosList.length) currentGigIndex = 0;
+            if (currentGigIndex < 0) currentGigIndex = gigPhotosList.length - 1;
+            updateCarouselDisplay();
+        }
+
+        function jumpToCarouselIndex(index) {
+            currentGigIndex = index;
+            updateCarouselDisplay();
+        }
+
+        function swapTheaterTrack(videoFile, videoType, activeBtnIndex) {
+            const player = document.getElementById('theaterPlayer');
+            const buttons = document.getElementsByClassName('track-selection-btn');
+
+            player.pause();
+            player.src = videoFile;
+            
+            for (let i = 0; i < buttons.length; i++) {
+                if (i === activeBtnIndex) {
+                    buttons[i].classList.remove('bg-neutral-950/40', 'border-transparent');
+                    buttons[i].classList.add('bg-neutral-950', 'border-red-600');
+                    buttons[i].querySelector('span').classList.remove('text-neutral-300');
+                    buttons[i].querySelector('span').classList.add('text-white');
+                } else {
+                    buttons[i].classList.remove('bg-neutral-950', 'border-red-600');
+                    buttons[i].classList.add('bg-neutral-950/40', 'border-transparent');
+                    buttons[i].querySelector('span').classList.remove('text-white');
+                    buttons[i].querySelector('span').classList.add('text-neutral-300');
+                }
+            }
+
+            player.load();
+            player.play().catch(function(error) {
+                console.log("Auto playback required manual interaction.");
+            });
+        }
+
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') navigateCarousel(1);
+            else if (event.key === 'ArrowLeft') navigateCarousel(-1);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateCarouselDisplay();
+        });
+    </script>
+</body>
+</html>
