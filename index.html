@@ -441,7 +441,7 @@
             const data = memberData[memberId];
 
             content.innerHTML = `
-                <div class="hidden md:block aspect-[4/5] bg-neutral-950 relative border-r border-neutral-800">
+                <div class="aspect-video w-full bg-neutral-950 relative border-b border-neutral-800">
                     <img src="${data.liveImage}" alt="${data.name} Live" class="w-full h-full object-cover grayscale" onerror="this.src='${data.image}'">
                 </div>
                 <div class="p-8 flex flex-col justify-center space-y-6">
